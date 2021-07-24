@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale= 0.50">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="game.css">
+    <title>Degrees of Adjectives</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 0.5px solid blue;
+            height: 5px;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+            height: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/-8ifqezKeas?rel=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="main">
+        <h1>Fill In The Blanks With Proper Degrees Of Adjectives</h1>
+        <h3>All entries should be in small letters</h3>
+        <br><br>
+        <div class="content">
+            <form action="#">
+                <table style="width:100%;">
+                    <tr>
+                        <th>Positive</th>
+                        <th>Comparitive</th>
+                        <th>Superlative</th>
+                    </tr>
+                    <div class="que">
+                        <tr>
+                            <td>Big</td>
+                            <td><input type="text" autocomplete="off" id="first" style="height: 30px;" /> </td>
+                            <td>Biggest</td>
+                        </tr>
+                    </div>
+                    <div class="que">
+                        <tr>
+                            <td>good</td>
+                            <td><input type="text" autocomplete="off" id="second" style="height: 30px;" /> </td>
+                            <td><input type="text" autocomplete="off" id="third" style="height: 30px;" /> </td>
+                        </tr>
+                    </div>
+                    <div class="que">
+                        <tr>
+                            <td><input type="text" autocomplete="off" id="ninth" style="height: 30px;" /> </td>
+                            <td><input type="text" autocomplete="off" id="fourth" style="height: 30px;" /> </td>
+                            <td>drawn</td>
+                        </tr>
+
+                    </div>
+                    <div class="que">
+                        <tr>
+                            <td><input type="text" autocomplete="off" id="fifth" style="height: 30px;" /> </td>
+                            <td>worse</td>
+                            <td><input type="text" autocomplete="off" id="sixth" style="height: 30px;" /> </td>
+                        </tr>
+                    </div>
+                    <div class="que">
+                        <tr>
+                            <td><input type="text" autocomplete="off" id="seventh" style="height: 30px;" /> </td>
+                            <td><input type="text" autocomplete="off" id="eighth" style="height: 30px;" /> </td>
+                            <td>saw</td>
+                        </tr>
+                    </div>
+                    <div class="que">
+                        <tr>
+                            <td><input type="text" autocomplete="off" id="tenth" style="height: 30px;" /> </td>
+                            <td><input type="text" autocomplete="off" id="eleventh" style="height: 30px;" /> </td>
+                            <td>most clever</td>
+                            <tr>
+                    </div>
+                </table>
+            </form>
+            <div class="button">
+                <input type="submit" name="submit" value="Submit" onclick="check();" class="submit">
+            </div>
+            <div class="instructions" id="endgame" style="display:none;">
+                <h2><strong><u>Game ends</u></strong></h2>
+                <h3>Your score is: <span id="score"></span></h3>
+                <div><a href="answers.html">Check Your Answers</a></div>
+                <div><a href="https://englishbolega.com/games">Play More</a></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function check() {
+            var ans1 = document.getElementById('first').value;
+            var ans2 = document.getElementById('second').value;
+            var ans3 = document.getElementById('third').value;
+            var ans4 = document.getElementById('fourth').value;
+            var ans5 = document.getElementById('fifth').value;
+            var ans6 = document.getElementById('sixth').value;
+            var ans7 = document.getElementById('seventh').value;
+            var ans8 = document.getElementById('eighth').value;
+            var ans9 = document.getElementById('ninth').value;
+            var ans10 = document.getElementById('tenth').value;
+            var ans11 = document.getElementById('eleventh').value;
+
+
+            var score = 0;
+
+            var a1 = "bigger";
+            var a2 = "better";
+            var a3 = "best";
+            var a4 = "drew";
+            var a5 = "bad";
+            var a6 = "worst";
+            var a7 = "see";
+            var a8 = "saw";
+            var a9 = "draw";
+            var a10 = "clever";
+            var a11 = "more clever";
+
+
+
+
+
+
+            if (ans1 == a1) {
+                score++;
+            }
+
+            if (ans2 == a2) {
+                score++;
+            }
+
+            if (ans3 == a3) {
+                score++;
+            }
+            if (ans4 == a4) {
+                score++;
+            }
+            if (ans5 == a5) {
+                score++;
+            }
+            if (ans6 == a6) {
+                score++;
+            }
+            if (ans7 == a7) {
+                score++;
+            }
+            if (ans8 == a8) {
+                score++;
+            }
+            if (ans9 == a9) {
+                score++;
+            }
+            if (ans10 == a10) {
+                score++;
+            }
+            if (ans11 == a11) {
+                score++;
+            }
+
+
+
+            document.getElementById('score').innerHTML = score;
+            document.getElementById('endgame').style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
